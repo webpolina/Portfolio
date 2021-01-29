@@ -1,0 +1,455 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family: 'Open Sans', sans-serif;
+
+}
+.navbar {
+    position:fixed;
+    background-color:transparent;
+    width:100%;
+    padding:30px 0;
+    top:0;
+    z-index:999;
+    transition: .3s linear;
+}
+.inner-width {
+    max-width:1300px;
+    margin:auto;
+    padding:0 40px;
+}
+.navbar .inner-width{
+    display:flex;
+    align-items:center;
+    justify-content:space-between; 
+}
+.logo {
+    background-image:url('./../images/1.svg');
+    width:60px;
+    height:60px;
+  background-size: contain;
+}
+.menu-toggle {
+    background:none;
+    width:30px;
+    border:none;
+    cursor:pointer;
+    position:relative;
+    outline:none;
+    z-index:999;
+    display:none;
+}
+.menu-toggle span{
+    display:block;
+    height:3px;
+    background-color:#000000;
+    margin:6px 0;
+    position:relative;
+    transition:.3s linear;
+
+}
+.navbar-menu a {
+    color:#000000;
+    font-size:15px;
+    font-weight:400;
+    margin-left:30px;
+    transition: .3s linear;
+}
+.navbar-menu a:hover{
+    color:#eb6e6e !important;
+}
+.sticky{
+    background-color:#585656;
+    padding:18px 0;
+}
+.sticky .logo{
+    background-image:url('./../images/1.svg');
+}
+.sticky .navbar-menu a{
+    color:#111;
+}
+.sticky .menu-toggle span{
+    background-color:#111;
+}
+
+#home{
+    height:100vh;
+    min-height:500px;
+    background:url("./../images/pawel-czerwinski-Z7mLgCrXB_o-unsplash.jpg") no-repeat center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+#home .inner-width{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100%;
+    text-align:center;   
+}
+
+#home .content{
+    width:100%;
+   color:#283651
+}
+#home .content h1{
+    font-size:60px;
+    margin-bottom:60px;
+}
+#home .content h1:after{
+content:"Webpolina";
+animation: textanim 10s linear infinite;
+}
+@keyframes textanim{
+    25%{
+    content:"дизайнер";
+}
+    50%{
+    content:"художник";
+}
+    75%{
+    content:"разработчик";
+}
+}
+.sm a{
+    color:#283651;
+    font-size:22px;
+    margin:0 10px;
+    transition: .2s linear;
+}
+.sm a:hover{
+    color:#eb6e6e;
+    transition: box-shadow 0.2s ease-in;
+}
+#home .buttons{
+    margin-top:60px;
+}
+#home .buttons a{
+    display:inline-block;
+    margin:15px 30px;
+    color:#283651;
+    font-size:15px;
+    font-weight:400;
+    width:180px;
+    border:1px solid;
+    padding:14px;
+    border-radius:5px;
+    transition: .2s linear;
+}
+#home .buttons a:hover,
+#home .buttons a:nth-child(2){
+    background-color:#283651;
+    color:#ffffff;
+}
+section{
+    padding:100px 0;
+    background-color:#ffffff;
+
+}
+.section-title {
+    text-align:center;
+    margin-bottom:80px;
+    position:relative;
+    font-size:26px;
+    padding-bottom:20px;
+    color:#000000;
+}
+/*.section-title::before{
+    content:"";
+    position:absolute;
+    width:108px;
+    height:3px;
+    background-color:#ffffff;
+    bottom:0;
+    left:center;
+}*/
+/*.section-title::after{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:10px;
+    background-color:#eb6e6e;
+    border:4px solid #f1f1f1;
+    left:calc(50% - 12px);
+    bottom:-7px;
+}*/
+.about-content {
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.about-pic{
+    width:200px;
+    height:200px;
+    object-fit:cover;
+    border-radius:50%;
+    margin-right:100px;
+}
+.about-text{
+    flex:1;
+}
+.about-text h3 span:nth-child(1):after,
+.about-text h3 span:nth-child(2):after{
+    content:"";
+    width:6px;
+    height:6px;
+    background-color:#444;
+    display:inline-block;
+    border-radius:50%;
+    margin:0 14px;
+}
+.about-text p{
+    font-size:17px;
+    text-align:justify;
+    line-height:26px;
+    margin-top:20px;
+}
+.skills {
+    margin-top:40px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.skill {
+    width:calc(50% - 20px);
+    margin:15px 0;
+}
+.skill-info {
+    display:flex;
+    justify-content:space-between;
+}
+.skill-bar{
+    height:3px;
+    background-color:#ddd;
+    margin-top:14px;
+    position:relative;
+}
+.skill-bar::after{
+    content:"";
+    position:absolute;
+    height:6px;
+    background-color:#eb6e6e;
+    bottom:0;
+}
+.ux:after{
+    width:70%
+}
+.html:after{
+    width:60%
+}
+.css:after{
+    width:60%
+}
+.js:after{
+    width:30%
+}
+section.polina{
+    background-color:#283651;
+}
+.section.polina .section-title{
+    color:#f1f1f1;
+}
+section.polina .section-title::before{
+    background-color:#f1f1f1;
+}
+section.polina .section-title::after{
+    border:4px solid #353b48;
+}
+
+.services{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.service{
+    width:calc(33% - 20px);
+    text-align:center;
+    margin-right:20px;
+    border:1px solid #eb6e6e;
+    margin:20px 0;
+    padding:40px 20px;
+    color:#ffffff;
+    cursor:pointer;
+    transition: .3s linear;
+}
+.service .icon{
+color:#eb6e6e;
+font-size:40px;
+margin-bottom:20px;
+transform: .3s linear;
+}
+.service h4{
+    font-size:16px;
+    margin-bottom:6px;
+}
+.service:hover{
+    background-color:#eb6e6e;
+}
+.service:hover .icon{
+    color:#ffffff;
+}
+.time-line, .works{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.block{
+    width:calc(50% - 20px);
+    background-color:#fff;
+    border:1px solid #ddd;
+    margin:10px 0;
+    padding:30px;
+    position:relative;
+}
+.block::before{
+    content:"";
+    position:absolute;
+    width:1px;
+    height:120%;
+    background-color:#ddd;
+    left:-20px;
+    top:20%;
+    transform:translate(-20%);
+}
+.block::after{
+    content:"";
+    position:absolute;
+    width:16px;
+    height:16px;
+    background-color:#eb6e6e;
+    left:-28px;
+    top:30px;
+    border-radius:50%;
+}
+.block h3{
+    font-size:16px;
+    margin:10px 0;
+}
+.block p{
+    font-size:15px;
+    color:#283651;
+}
+.works{
+    display:flex;
+    justify-content: space-around;
+
+}
+.work{
+width:calc(33% - 20px);
+overflow:hidden;
+margin:10px 0;
+cursor:pointer;
+position:relative;
+}
+.work img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+.work::before{ 
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:1;
+    background-color:#eb6e6e;
+    transition: .4s linear;
+    opacity:0;
+    transform:scale(0);
+}
+.work .info{
+    position:absolute;
+    z-index:2;
+    bottom:40px;
+    left:40px;
+    color:#fff;
+    transition: .4s linear;
+    opacity:0;
+}
+@media screen and (max-width:980px){
+    .menu-toggle{
+        display:block;
+    }
+    .navbar-menu{
+        position:fixed;
+        height:100vh;
+        width:100%;
+        background-color:#353b48;
+        top:0;
+        right:-100%;
+        max-width:400px;
+        padding:80px 50px;
+        transition: .3s linear;
+    }
+    .navbar-menu a{
+        display:block;
+        font-size:30px;
+        margin:30px 0;
+    }
+    .sticky .navbar-menu {
+        background-color:#f1f1f1;
+    }
+    .navbar-menu.active{
+        right:0;
+    }
+    .menu-toggle.active span:nth-child(1){
+        transform:rotate(-45deg);
+        top:4px;
+    }
+    .menu-toggle.active span:nth-child(2){
+       opacity:0;
+    }
+    .menu-toggle.active span:nth-child(3){
+        transform:rotate(45deg);
+        bottom:14px;
+    }
+    .inner-width{
+        max-width:800px;
+    }
+    .about-pic{
+        margin:0 auto 60px;s
+    }
+    .about-text{
+        flex:100%;
+        text-align:center;
+    }
+    .service{
+        width:calc(50% - 20px);
+    }
+    .block{
+        width:calc(100% - 20px);
+        margin-left:auto;
+    }
+    .work{
+        width:calc(50% - 10px);
+    }
+}
+.contact-info {
+    display:flex;
+    justify-content:center;   
+}
+.item {
+}
+.fas.fa-mobile-alt {
+color:#eb6e6e;
+}
+.fas.fa-mail-bulk {
+    margin-left:40px;
+    color:#eb6e6e
+}
+
+@media screen and (max-width:600px){
+    .inner-width{
+        padding:0 20px;
+    }
+    .skill{
+    width:100%
+    }
+    .service{
+        width:100%
+    }
+    .work{
+        width:100%;
+    }
+}
